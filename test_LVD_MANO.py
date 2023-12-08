@@ -147,7 +147,7 @@ class Test:
                 # d1 = torch.sqrt(directed_distance(vertices_scan_torch, vertices_smpl[0], False)).mean()
                 # d2 = torch.sqrt(directed_distance(vertices_smpl[0], vertices_scan_torch, False)).mean()
 
-                loss = 2 * sided_distance(torch.unsqueeze(vertices_scan_torch,0), torch.unsqueeze(vertices_smpl[0],0))[0].mean()
+                loss = sided_distance(torch.unsqueeze(vertices_scan_torch,0), torch.unsqueeze(vertices_smpl[0],0))[0].mean()
 
                 prior_loss = (pose**2).mean() #self.prior.forward(pose[:, 3:], beta)
                 beta_loss = (beta**2).mean()
