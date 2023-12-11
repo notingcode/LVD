@@ -4,6 +4,12 @@
 
 <img src='https://www.iri.upc.edu/people/ecorona/lvd/lvd_teaser.png' width=800>
 
+## Cloning Repo
+
+```[bash]
+git clone https://github.com/notingcode/LVD.git --recursive
+```
+
 ## DATA
 
 Learned Vertex Descent works with the parametric models SMPL or MANO, which can be downloaded from their websites. In particular, we use the neutral SMPL with cocoplus regressor and the original MANO layer for pytorch. If you need to train the model on humans you will need supervision on SMPL, which we had on 3D scans with SMPL registrations. However, we also provide trained checkpoints for the task of SMPL estimation from images, SMPL estimation from 3D scans and MANO estimation from 3D hand scans.
@@ -12,7 +18,7 @@ Learned Vertex Descent works with the parametric models SMPL or MANO, which can 
 
 We trained our networks with the neutral SMPL model. Please download the neutral SMPL files from the [[official website]](https://smpl.is.tue.mpg.de/) and place the `neutral_smpl_with_cocoplus_reg.txt` under the utils/ folder.
 
-With the task of 3D hand reconstruction, we use MANO and follow the pytorch implementation from `https://github.com/hassony2/manopth`. ~~Please follow their instructions to download MANO from the official website and install the MANO library.~~ **EDIT**: Manopth is installed through conda. Also, if you already have an account on the official website of MANO, you can use `download_mano_data.sh` instead.
+With the task of 3D hand reconstruction, we use MANO and follow the pytorch implementation from `https://github.com/hassony2/manopth`. ~~Please follow their instructions to download MANO from the official website and install the MANO library.~~ **EDIT**: Manopth is installed with the conda environment.yml file provided. Also, if you already have an account on the official website of [MANO](https://mano.is.tue.mpg.de/), you can use `download_mano_data.sh` instead.
 
 Please respect the license of the respective works.
 
